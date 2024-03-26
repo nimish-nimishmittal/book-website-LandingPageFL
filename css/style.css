@@ -309,10 +309,11 @@ section{
 
 .home .row .books-slider a img{
     height: 25rem;
+    transform: scale(.9);
 }
 
 .home .row .books-slider a:hover img{
-    transform: scale(.9);
+    transform: scale(.85);
 }
 
 .home .row .books-slider .stand{
