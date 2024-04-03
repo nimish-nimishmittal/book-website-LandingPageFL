@@ -158,3 +158,36 @@ var swiper = new Swiper(".blogs-slider", {
     },
   },
 });
+
+/**
+ * filter tab
+ */
+
+const tabCard = document.querySelectorAll("[data-tab-card]");
+
+let lastTabCard = tabCard[0];
+
+const navigateTab = function () {
+  lastTabCard.classList.remove("active");
+  this.classList.add("active");
+  lastTabCard = this;
+}
+
+addEventOnelem(tabCard, "click", navigateTab);
+
+
+/**
+ * header active on scroll down to 100px
+ */
+
+const header = document.querySelector("[data-header]");
+
+const activeHeader = function () {
+  if (window.scrollY > 100) {
+    header.classList.add("active");
+  } else {
+    header.classList.remove("active");
+  }
+}
+
+addEventOnelem(window, "scroll", activeHeader);
