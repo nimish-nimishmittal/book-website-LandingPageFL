@@ -964,8 +964,22 @@ section{
     flex-direction: column;
     gap: 10px;
   }
+  .aactive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* Set the height to 100% of the viewport height */
+  }
+  
+  .aactive > img {
+    width: 300px; /* Adjust the width as needed */
+  }
+    li{
+        list-style: none;
+    }
   
   .tab-card {
+
     position: relative;
     height: 60px;
     background-color: var(--seashell);
