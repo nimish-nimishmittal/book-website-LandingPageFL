@@ -964,8 +964,29 @@ section{
     flex-direction: column;
     gap: 10px;
   }
+  .aactive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .aactive > img {
+    width: 300px; /* Adjust the width as needed */
+  }
+    li{
+        list-style: none;
+    }
+    @media (max-width: 768px) {
+        .aactive > img {
+          width: 80%; /* Set a percentage width for smaller screens */
+        }
+        .aactive{
+            margin-bottom: 15px;
+        }
+      }
   
   .tab-card {
+
     position: relative;
     height: 60px;
     background-color: var(--seashell);
