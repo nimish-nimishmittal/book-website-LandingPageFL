@@ -968,7 +968,6 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-     /* Set the height to 100% of the viewport height */
   }
   
   .aactive > img {
@@ -977,6 +976,14 @@ section{
     li{
         list-style: none;
     }
+    @media (max-width: 768px) {
+        .aactive > img {
+          width: 80%; /* Set a percentage width for smaller screens */
+        }
+        .aactive{
+            margin-bottom: 15px;
+        }
+      }
   
   .tab-card {
 
