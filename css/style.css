@@ -199,6 +199,35 @@ section{
 .btn:hover{
     background:var(--dark-color);
 }
+.tab-card-active>img{
+    
+    width: 700px;
+    align-items: center;
+    justify-content: center;
+  
+}
+.tab-card-active {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    text-align: center; /* Center the image if it's inline */
+}
+
+.tab-card-active > img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 576px) {
+    .tab-card-active > img {
+        width: 100%; /* Set the width to 100% for small screens */
+        height: auto; /* Maintain aspect ratio */
+        align-items: center; /* Align the image in the center */
+        justify-content: center; /* Center the image horizontally */
+    }
+}
+
+
 
 .header .header-1{
     background:#fff;
@@ -1030,6 +1059,7 @@ section{
    .author .container {
     grid-template-columns: 0.6fr 1fr;
     gap: 0;
+   
   }
 
   .author-content {
@@ -1060,7 +1090,7 @@ section{
 
   }
 
-  .container { padding-inline: 15px; }
+  .container { padding-inline: 15px;}
 
   .section { padding-block: var(--section-padding); }
   
@@ -1112,7 +1142,10 @@ section{
   #AUTHOR
 \*-----------------------------------*/
 
-.author { background-color: var(--seashell); }
+.author {
+
+    background-color: var(--seashell);
+ }
 
 .author .container {
   display: grid;
@@ -1130,5 +1163,51 @@ section{
   font-size: var(--fs-6);
   margin-block-end: 30px;
 }
+.section-text{
+    height: 570px;
+}
+.author-banner-img-holder{
+    margin-top: 10px;
+   
+}
+
 
 .author .section-text { font-size: unset; }
+.author {
+    background-color: var(--seashell);
+  }
+  
+  .author .container {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .author :is(.section-subtitle, .section-title) {
+    text-align: left;
+  }
+  
+  .author-content {
+    background-color: var(--white);
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .author-name {
+    font-size: var(--fs-6);
+    margin-block-end: 20px;
+  }
+  
+  .author .section-text {
+    font-size: unset;
+  }
+
+  
+  @media screen and (max-width: 576px) {
+    .author-content { padding: 15px; overflow: hidden; }
+    .author .container { grid-template-columns: 1fr; gap: 10px; }
+    .author-banner-img-holder img { max-width: 100%; height: auto; }
+    .author-name { font-size: var(--fs-5); margin-block-end: 15px; }
+    .section-text { height: auto; }
+  }
+  
+  
